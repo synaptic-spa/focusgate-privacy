@@ -18,12 +18,13 @@
 <body>
   <main>
     <h1>Política de privacidad de FocusGate</h1>
-    <p class="meta"><strong>Fecha de entrada en vigor:</strong> 22 de septiembre de 2026</p>
+    <p class="meta"><strong>Fecha de entrada en vigor:</strong> 23 de septiembre de 2026</p>
 
     <p>FocusGate es una aplicación de bienestar digital desarrollada por <strong>Synaptic Spa</strong>. Esta política explica cómo la aplicación accede, usa, almacena y protege los datos cuando utilizas sus funciones.</p>
 
     <h2>1. Datos almacenados en tu dispositivo</h2>
     <p>FocusGate funciona principalmente de forma local. Guarda en el dispositivo la configuración, objetivos, horarios, aplicaciones que eliges proteger, progreso, historial de desbloqueos, intentos de retos y créditos de tiempo.</p>
+    <p>FocusGate solicita a Android que no incluya estos datos en copias de seguridad ni transferencias automáticas y excluye explícitamente bases de datos, preferencias y archivos de la aplicación. Algunos fabricantes ofrecen herramientas de migración ajenas al mecanismo estándar de Android; FocusGate no puede garantizar cómo actúan esas herramientas externas.</p>
 
     <h2>2. Acceso de uso y superposición</h2>
     <p>El permiso de <strong>Acceso de uso</strong> se utiliza únicamente para detectar si una aplicación que tú seleccionaste para proteger está en primer plano. El permiso de <strong>superposición</strong> se utiliza para mostrar el reto sobre esa aplicación. FocusGate no lee ni registra mensajes, contraseñas, correos, historial de navegación, contenido de pantalla ni interacciones dentro de otras aplicaciones.</p>
@@ -31,39 +32,44 @@
     <h2>3. Cámara</h2>
     <p>El módulo opcional «Activa tu cuerpo» puede utilizar la cámara para detectar posturas durante un ejercicio. Las imágenes se procesan localmente en el dispositivo para el conteo de movimientos. FocusGate no graba, almacena ni transmite fotos o videos mediante esta función.</p>
 
-    <h2>4. Cuenta y sincronización de progreso</h2>
+    <h2>4. Micrófono y reconocimiento de voz</h2>
+    <p>Las prácticas orales solicitan acceso al micrófono solo cuando decides iniciarlas. Desde Android 12, FocusGate prioriza el reconocedor en el dispositivo cuando Android confirma que está disponible. Si no lo está o no puede iniciarse, utiliza el servicio de voz configurado en Android, que puede procesar el audio localmente o de forma remota según el dispositivo y el proveedor.</p>
+    <p>FocusGate no envía grabaciones a Supabase ni a servidores propios, no registra en logs lo que dices y no conserva el audio usado para reconocimiento. Una práctica distinta de repetición puede crear una grabación temporal en la caché local para que puedas escucharte; se elimina al volver a grabar, reiniciar o salir de la práctica.</p>
+
+    <h2>5. Cuenta y sincronización de progreso</h2>
     <p>FocusGate puede crear una cuenta anónima en Supabase. Consiste en un identificador aleatorio y no contiene nombre ni correo. Si decides registrar o vincular la cuenta mediante Google Sign-In, se tratan los datos necesarios para iniciar sesión, como el correo verificado facilitado por ese proveedor.</p>
     <p>Al completar un desafío o elegir no entrar a una aplicación bloqueada, se pueden sincronizar un identificador del evento, fecha y hora, segundos de aprendizaje, módulo, dificultad y tipo de evento. Esta sincronización no incluye tus respuestas, notas de «Volver a ti» ni la lista de aplicaciones protegidas.</p>
 
-    <h2>5. Conexiones a internet y contenido remoto</h2>
+    <h2>6. Conexiones a internet y contenido remoto</h2>
     <p>FocusGate puede conectarse mediante HTTPS a Supabase para descargar contenido informativo, como curiosidades y mensajes dentro de la aplicación. Estas solicitudes no envían intencionalmente la lista de aplicaciones protegidas, respuestas, notas ni imágenes de cámara. Como ocurre con cualquier conexión a internet, el proveedor de infraestructura puede procesar la dirección IP y datos técnicos de la solicitud necesarios para prestar el servicio.</p>
 
-    <h2>6. Estadísticas opcionales</h2>
+    <h2>7. Estadísticas opcionales</h2>
     <p>Las estadísticas están desactivadas por defecto. Solo si activas voluntariamente «Estadísticas anónimas» en la pantalla de Privacidad, FocusGate envía a Supabase un identificador aleatorio de instalación, un identificador de sesión, eventos y pantallas visitadas, versión de la aplicación y metadatos limitados, como módulo o categoría. Estos datos se usan para entender el uso de la aplicación y mejorarla.</p>
     <p>Las estadísticas no incluyen aplicaciones protegidas, nombres de aplicaciones instaladas, respuestas, notas, imágenes de cámara, nombre, correo, teléfono, identificador publicitario ni ubicación. Utilizan un identificador separado y no se cruzan con la cuenta o la sincronización de progreso. FocusGate no tiene perfiles publicitarios ni SDK de publicidad.</p>
 
-    <h2>7. Notificaciones</h2>
+    <h2>8. Notificaciones</h2>
     <p>Cuando la protección está activa, Android puede mostrar una notificación persistente del monitor en segundo plano. Esta notificación informa que la protección está activa y permite volver a la aplicación o detenerla.</p>
 
-    <h2>8. Conservación y eliminación</h2>
+    <h2>9. Conservación y eliminación</h2>
     <p>Los datos locales se conservan en tu dispositivo hasta que los elimines. Puedes limpiar el historial desde la aplicación y eliminar todos los datos locales borrando el almacenamiento de FocusGate en Ajustes de Android o desinstalando la aplicación.</p>
     <p>Puedes solicitar la eliminación permanente de una cuenta registrada o anónima y de sus datos asociados en el servidor mediante la página <a href="eliminar-cuenta.html">Eliminar tu cuenta</a>. Esa página explica la verificación de titularidad y la limitación aplicable a cuentas anónimas sin sesión.</p>
     <p>Al desactivar las estadísticas, FocusGate deja de enviar eventos futuros. Los datos técnicos y de analítica que hayan llegado a Supabase se conservan solo durante el tiempo necesario para operar, proteger y mejorar el servicio, conforme a la configuración y obligaciones aplicables de Synaptic Spa y sus proveedores de infraestructura.</p>
 
-    <h2>9. Proveedores de servicio</h2>
+    <h2>10. Proveedores de servicio</h2>
     <ul>
       <li><strong>Supabase:</strong> infraestructura para cuentas, sincronización de progreso, contenido remoto y estadísticas opcionales.</li>
+      <li><strong>Servicio de reconocimiento de voz configurado en Android:</strong> puede procesar el audio localmente o de forma remota cuando el reconocedor en el dispositivo no está disponible.</li>
       <li><strong>Google Sign-In:</strong> proveedor de identidad, solo si decides vincular o registrar una cuenta.</li>
       <li><strong>Google ML Kit:</strong> detección de posturas procesada localmente en el dispositivo.</li>
     </ul>
 
-    <h2>10. Seguridad</h2>
+    <h2>11. Seguridad</h2>
     <p>Las comunicaciones de red de FocusGate utilizan HTTPS. El acceso a los permisos de Android se solicita únicamente cuando corresponde a la función descrita y puede revocarse desde los ajustes del dispositivo.</p>
 
-    <h2>11. Contacto</h2>
+    <h2>12. Contacto</h2>
     <p>Para consultas sobre privacidad o sobre esta política, escríbenos a <a href="mailto:synapticsa@gmail.com">synapticsa@gmail.com</a>.</p>
 
-    <h2>12. Cambios a esta política</h2>
+    <h2>13. Cambios a esta política</h2>
     <p>Podemos actualizar esta política cuando cambien las funciones o prácticas de datos de FocusGate. La versión vigente se publicará en esta página con su fecha de entrada en vigor o de actualización.</p>
   </main>
   <footer>
